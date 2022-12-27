@@ -1,32 +1,7 @@
 import 'package:flutter/material.dart';
-
-enum CardSuit {
-  spades,
-  hearts,
-  diamonds,
-  clubs,
-}
-
-enum CardType {
-  one,
-  two,
-  three,
-  four,
-  five,
-  six,
-  seven,
-  eight,
-  nine,
-  ten,
-  jack,
-  queen,
-  king
-}
-
-enum CardColor {
-  red,
-  black,
-}
+import 'package:solitaire_flutter/enum/cardcolor.dart';
+import 'package:solitaire_flutter/enum/cardsuit.dart';
+import 'package:solitaire_flutter/enum/cardtype.dart';
 
 // Simple playing card model
 class PlayingCard {
@@ -43,11 +18,10 @@ class PlayingCard {
   });
 
   CardColor get cardColor {
-    if(cardSuit == CardSuit.hearts || cardSuit == CardSuit.diamonds) {
+    if (cardSuit == CardSuit.hearts || cardSuit == CardSuit.diamonds) {
       return CardColor.red;
     } else {
       return CardColor.black;
     }
   }
-
 }

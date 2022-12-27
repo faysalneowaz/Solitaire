@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:solitaire_flutter/card_column.dart';
+import 'package:solitaire_flutter/enum/cardsuit.dart';
+import 'package:solitaire_flutter/enum/cardtype.dart';
 import 'package:solitaire_flutter/playing_card.dart';
 
 // TransformedCard makes the card draggable and translates it according to

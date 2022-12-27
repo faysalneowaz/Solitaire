@@ -1,0 +1,4 @@
+enum CardColor {
+  red,
+  black,
+}

@@ -1,4 +1,3 @@
-
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -6,6 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'package:solitaire_flutter/card_column.dart';
 import 'package:solitaire_flutter/empty_card.dart';
+import 'package:solitaire_flutter/enum/cardsuit.dart';
+import 'package:solitaire_flutter/enum/cardtype.dart';
 import 'package:solitaire_flutter/playing_card.dart';
 import 'package:solitaire_flutter/transformed_card.dart';
 
@@ -476,7 +477,6 @@ class _GameScreenState extends State<GameScreen> {
 
   // Handle a win condition
   void _handleWin() {
-
     showAnimatedDialog(
       context: context,
       barrierDismissible: true,

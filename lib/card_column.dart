@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:solitaire_flutter/enum/cardcolor.dart';
+import 'package:solitaire_flutter/enum/cardtype.dart';
 import 'package:solitaire_flutter/playing_card.dart';
 import 'package:solitaire_flutter/transformed_card.dart';
 
@@ -6,7 +8,6 @@ typedef Null CardAcceptCallback(List<PlayingCard> card, int fromIndex);
 
 // This is a stack of overlayed cards (implemented using a stack)
 class CardColumn extends StatefulWidget {
-
   // List of cards in the stack
   final List<PlayingCard> cards;
 
@@ -61,25 +62,27 @@ class _CardColumnState extends State<CardColumn> {
               return false;
             }
 
-            int lastColumnCardIndex = CardType.values.indexOf(widget.cards.last.cardType);
-            int firstDraggedCardIndex = CardType.values.indexOf(firstCard.cardType);
+            int lastColumnCardIndex =
+                CardType.values.indexOf(widget.cards.last.cardType);
+            int firstDraggedCardIndex =
+                CardType.values.indexOf(firstCard.cardType);
 
-            if(lastColumnCardIndex != firstDraggedCardIndex + 1) {
+            if (lastColumnCardIndex != firstDraggedCardIndex + 1) {
               return false;
             }
-
           } else {
             if (widget.cards.last.cardColor == CardColor.black) {
               return false;
             }
 
-            int lastColumnCardIndex = CardType.values.indexOf(widget.cards.last.cardType);
-            int firstDraggedCardIndex = CardType.values.indexOf(firstCard.cardType);
+            int lastColumnCardIndex =
+                CardType.values.indexOf(widget.cards.last.cardType);
+            int firstDraggedCardIndex =
+                CardType.values.indexOf(firstCard.cardType);
 
-            if(lastColumnCardIndex != firstDraggedCardIndex + 1) {
+            if (lastColumnCardIndex != firstDraggedCardIndex + 1) {
               return false;
             }
-
           }
           return true;
         },
